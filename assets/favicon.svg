@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Иконка бородатой агамы">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#f6e3c1"/>
+      <stop offset="100%" stop-color="#c97a2b"/>
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <!-- head triangle -->
+  <path d="M32 12 L52 24 L48 44 L32 50 L16 44 L12 24 Z"
+        fill="#a45a14" stroke="#5a3008" stroke-width="1.5" stroke-linejoin="round"/>
+  <!-- beard -->
+  <path d="M22 40 Q32 56 42 40 Q40 50 32 52 Q24 50 22 40 Z"
+        fill="#7a3a08" stroke="#3a1a04" stroke-width="1"/>
+  <!-- spikes -->
+  <g fill="#5a3008">
+    <polygon points="14,22 10,18 18,24"/>
+    <polygon points="50,22 54,18 46,24"/>
+    <polygon points="18,16 14,12 22,18"/>
+    <polygon points="46,16 50,12 42,18"/>
+  </g>
+  <!-- eyes -->
+  <circle cx="25" cy="26" r="3.2" fill="#fff"/>
+  <circle cx="39" cy="26" r="3.2" fill="#fff"/>
+  <circle cx="25" cy="27" r="1.6" fill="#1a0e04"/>
+  <circle cx="39" cy="27" r="1.6" fill="#1a0e04"/>
+  <!-- nostrils -->
+  <circle cx="30" cy="34" r="0.9" fill="#2a1404"/>
+  <circle cx="34" cy="34" r="0.9" fill="#2a1404"/>
+  <!-- mouth -->
+  <path d="M27 40 Q32 42 37 40" fill="none" stroke="#2a1404" stroke-width="1.2" stroke-linecap="round"/>
+</svg>

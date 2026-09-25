@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Бородатая агама (Pogona vitticeps) — внешний вид, ареал, содержание в неволе и питание. Факты, фото и рекомендации террариумиста." />
+  <meta name="theme-color" content="#c97a2b" />
+  <title>Бородатая агама (Pogona vitticeps) — портрет вида</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://upload.wikimedia.org" />
+  <style>
+    :root {
+      --bg: #faf3e6;
+      --surface: #ffffff;
+      --ink: #2b2218;
+      --muted: #6b5a47;
+      --accent: #c97a2b;
+      --accent-strong: #a45a14;
+      --accent-soft: #f1d9b6;
+      --line: #e6d6bc;
+      --shadow: 0 6px 24px rgba(75, 50, 20, 0.08);
+      --radius: 14px;
+      --maxw: 1080px;
+      --serif: "Iowan Old Style", "Palatino Linotype", Palatino, "Georgia", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    a { color: var(--accent-strong); text-decoration: none; border-bottom: 1px solid transparent; }
+    a:hover { border-bottom-color: var(--accent-strong); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      padding: 64px 24px 96px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(201, 122, 43, 0.18), transparent 55%),
+        radial-gradient(circle at 80% 30%, rgba(164, 90, 20, 0.12), transparent 55%),
+        linear-gradient(180deg, #f6e3c1 0%, #faf3e6 100%);
+      overflow: hidden;
+    }
+    .hero-inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1.1;
+      margin: 0 0 12px;
+      letter-spacing: -0.01em;
+    }
+    .hero .latin {
+      font-style: italic;
+      color: var(--accent-strong);
+      font-size: 1.15rem;
+      margin-bottom: 18px;
+      font-family: var(--serif);
+    }
+    .hero p.lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 52ch;
+    }
+    .hero .cta-row {
+      margin-top: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .pill {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 0.92rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .pill:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow);
+      border-bottom-color: var(--line);
+    }
+
+    .hero-figure {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      aspect-ratio: 4 / 3;
+      background: #e8d6b8;
+    }
+    .hero-figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-figure figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 10px 14px;
+      font-size: 0.8rem;
+      color: #fff;
+      background: linear-gradient(0deg, rgba(0,0,0,0.55), transparent);
+    }
+
+    /* ---------- Nav ---------- */
+    nav.toc {
+      max-width: var(--maxw);
+      margin: -48px auto 0;
+      padding: 14px 18px;
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      position: relative;
+      z-index: 2;
+    }
+    nav.toc a {
+      font-size: 0.95rem;
+      color: var(--ink);
+      border-bottom: none;
+    }
+    nav.toc a:hover { color: var(--accent-strong); }
+
+    /* ---------- Main ---------- */
+    main {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    section { margin-bottom: 64px; scroll-margin-top: 24px; }
+    section h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 2.4vw, 2rem);
+      margin: 0 0 8px;
+      letter-spacing: -0.005em;
+    }
+    section .eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-strong);
+      margin-bottom: 6px;
+    }
+    section p { margin: 0 0 14px; }
+    section .lead { font-size: 1.05rem; color: var(--muted); }
+
+    /* ---------- Facts grid ---------- */
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .fact {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+    }
+    .fact .label {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .fact .value {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      margin-top: 4px;
+      color: var(--ink);
+    }
+
+    /* ---------- Cards / gallery ---------- */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+    }
+    .card .img {
+      aspect-ratio: 4 / 3;
+      background: #ece1cc;
+      overflow: hidden;
+    }
+    .card .img img { width: 100%; height: 100%; object-fit: cover; }
+    .card .body {
+      padding: 16px 18px 20px;
+    }
+    .card h3 {
+      font-family: var(--serif);
+      margin: 0 0 6px;
+      font-size: 1.15rem;
+    }
+    .card p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+
+    .credit {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* ---------- Diet table ---------- */
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 520px;
+    }
+    th, td {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.97rem;
+    }
+    th {
+      background: var(--accent-soft);
+      font-family: var(--serif);
+      font-weight: 600;
+    }
+    tr:last-child td { border-bottom: none; }
+
+    /* ---------- Care ---------- */
+    .care-list {
+      list-style: none;
+      padding: 0;
+      margin: 22px 0 0;
+      display: grid;
+      gap: 12px;
+    }
+    .care-list li {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      padding: 14px 18px;
+    }
+    .care-list b { color: var(--accent-strong); }
+
+    /* ---------- Footer ---------- */
+    footer {
+      border-top: 1px solid var(--line);
+      background: #f3e6cf;
+      padding: 28px 24px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    footer .inner {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    footer a { color: var(--accent-strong); }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 760px) {
+      .hero { padding: 48px 20px 80px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 28px; }
+      nav.toc { margin-top: -32px; }
+      main { padding: 44px 20px; }
+      section { margin-bottom: 48px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .pill { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="eyebrow">Пресмыкающиеся · Семейство Agamidae</span>
+        <h1>Бородатая агама</h1>
+        <div class="latin">Pogona vitticeps</div>
+        <p class="lead">
+          Среднегабаритная ящерица из засушливых районов Австралии, ставшая одним из самых популярных террариумных животных в мире. Узнаваема по «бороде» — раздувающемуся горловому мешку с шиповатой чешуёй — и спокойному, контактному характеру.
+        </p>
+        <div class="cta-row">
+          <a class="pill" href="#appearance">Внешний вид</a>
+          <a class="pill" href="#range">Ареал</a>
+          <a class="pill" href="#captivity">В неволе</a>
+          <a class="pill" href="#diet">Питание</a>
+          <a class="pill" href="#gallery">Галерея</a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Pogona_vitticeps_close-up_2009_G3.jpg/1280px-Pogona_vitticeps_close-up_2009_G3.jpg"
+          alt="Крупный план головы бородатой агамы с раскрытой бородой"
+          loading="eager"
+          width="1280" height="960" />
+        <figcaption>Pogona vitticeps, самец, демонстрирует «бороду». Фото: Wikimedia Commons, CC&nbsp;BY-SA.</figcaption>
+      </figure>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Содержание страницы">
+    <a href="#appearance">Внешний вид</a>
+    <a href="#range">Ареал и среда обитания</a>
+    <a href="#diet">Питание</a>
+    <a href="#captivity">Содержание в неволе</a>
+    <a href="#behavior">Поведение</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#sources">Источники</a>
+  </nav>
+
+  <main>
+
+    <!-- Appearance -->
+    <section id="appearance">
+      <span class="eyebrow">01 · Морфология</span>
+      <h2>Внешний вид</h2>
+      <p class="lead">
+        Взрослые особи достигают около 60 см от кончика морды до кончика хвоста, причём больше половины длины приходится на хвост. Масса крупных самцов — до 500–550&nbsp;г.
+      </p>
+
+      <div class="facts" role="list">
+        <div class="fact" role="listitem">
+          <div class="label">Длина тела</div>
+          <div class="value">до 60 см</div>
+        </div>
+        <div class="fact" role="listitem">
+          <div class="label">Масса</div>
+          <div class="value">до 550 г</div>
+        </div>
+        <div class="fact" role="listitem">
+          <div class="label">Продолжительность жизни</div>
+          <div class="value">8–12 лет</div>
+        </div>
+        <div class="fact" role="listitem">
+          <div class="label">Половая зрелость</div>
+          <div class="value">1–2 года</div>
+        </div>
+        <div class="fact" role="listitem">
+          <div class="label">Окрас</div>
+          <div class="value">бурый, рыжий, жёлтый</div>
+        </div>
+      </div>
+
+      <p style="margin-top:24px;">
+        Тело широкое, уплощённое, голова — треугольная. По бокам головы и вдоль тела тянутся ряды шиповатых чешуй. Под подбородком расположен <b>глоточный мешок</b>, который в момент угрозы или ухаживания раздувается и темнеет — отсюда и название «бородатая». Лапы сильные и мускулистые: при движении агама высоко приподнимает тело над раскалённой почвой, чтобы снизить нагрев и обеспечить приток воздуха снизу.
+      </p>
+      <p>
+        Половой диморфизм выражен заметно: у самцов более крупная угловатая голова, шире основание хвоста, сильнее развита «борода» и заметнее бедренные поры (восковые бугорки на нижней стороне задних ног).
+      </p>
+    </section>
+
+    <!-- Range -->
+    <section id="range">
+      <span class="eyebrow">02 · Биогеография</span>
+      <h2>Ареал и среда обитания</h2>
+      <p>
+        <em>Pogona vitticeps</em> — эндемик Австралии. Вид распространён в засушливых и полузасушливых районах восточной и центральной части материка: от восточной половины Южной Австралии через север Нового Южного Уэльса и Квинсленд до юго-востока Северной территории.
+      </p>
+      <p>
+        Среда обитания — <b>полупустынные редколесья</b> (англ. <i>semiarid woodland</i>), кустарниковые заросли и каменистые пустыни с разрозненными деревьями. Это наземно-древесный вид: агамы одинаково охотно греются на камнях, поваленных стволах, заборах и ветвях кустарников. Активны днём; пик приходится на утро и ранний вечер, в полуденный зной укрываются в норах и тени.
+      </p>
+    </section>
+
+    <!-- Diet -->
+    <section id="diet">
+      <span class="eyebrow">03 · Трофическая экология</span>
+      <h2>Питание</h2>
+      <p>
+        Бородатая агама — <b>оппортунистический всеядный</b> вид. Рацион в природе включает насекомых (сверчки, кузнечики, жуки, гусеницы, термиты), мелких позвоночных, а также значительную долю растительной пищи — листья, цветы и плоды.
+      </p>
+
+      <div class="table-wrap" role="region" aria-label="Структура летнего рациона взрослых особей в дикой природе">
+        <table>
+          <caption style="caption-side:bottom; padding:10px 16px; color:var(--muted); font-size:0.85rem;">
+            Структура летнего рациона диких взрослых особей (по объёму).
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Компонент</th>
+              <th scope="col">Доля</th>
+              <th scope="col">Примеры</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Растительная пища</td>
+              <td>~54&nbsp;%</td>
+              <td>листья, цветы, плоды местных кустарников и трав</td>
+            </tr>
+            <tr>
+              <td>Летающие термиты (<i>Drepanotermes</i>)</td>
+              <td>~26&nbsp;%</td>
+              <td>сезонные алаты, массово появляющиеся после дождей</td>
+            </tr>
+            <tr>
+              <td>Прочие беспозвоночные</td>
+              <td>~15&nbsp;%</td>
+              <td>жуки, гусеницы, пауки, прямокрылые</td>
+            </tr>
+            <tr>
+              <td>Мелкие позвоночные</td>
+              <td>~5&nbsp;%</td>
+              <td>мелкие ящерицы, мышата</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="margin-top:18px;">
+        Соотношение меняется с возрастом: молодые особи преимущественно насекомоядны и нуждаются в большом количестве белка для роста, тогда как у взрослых доля растительного корма возрастает до двух третей и более.
+      </p>
+    </section>
+
+    <!-- Captivity -->
+    <section id="captivity">
+      <span class="eyebrow">04 · Террариумистика</span>
+      <h2>Содержание в неволе</h2>
+      <p>
+        Большинство современных террариумных агам — потомки животных, нелегально вывезенных из Австралии в 1974–1990 годах (с 1960-х годов экспорт дикой фауны из Австралии запрещён). Сегодня вид разводится в неволе по всему миру и считается одной из самых распространённых рептилий в зоокультуре.
+      </p>
+
+      <ul class="care-list">
+        <li><b>Террариум.</b> Минимум — 120&nbsp;×&nbsp;60&nbsp;×&nbsp;60&nbsp;см для одной взрослой особи; больше — лучше. Обязательны зона прогрева (35–40&nbsp;°C) и прохладный угол (~26&nbsp;°C).</li>
+        <li><b>Освещение.</b> Ультрафиолетовая лампа UVB (10–12&nbsp;%) необходима для синтеза витамина&nbsp;D3 и усвоения кальция. Без UVB развивается метаболическая болезнь костей (MBD).</li>
+        <li><b>Субстрат.</b> Для молодых — бумажные полотенца или плитка; для взрослых допустим крупный песок или специализированные коврики. Мелкий сыпучий грунт опасен при проглатывании.</li>
+        <li><b>Вода.</b> Поилка с чистой водой; многие агамы предпочитают пить капли с декораций после опрыскивания.</li>
+        <li><b>Рацион.</b> 70&nbsp;% растительной пищи (листья, тыквенные, перец, зелень) и 30&nbsp;% насекомых (сверчки, тараканы, зофобас) для взрослых; для молодых — соотношение обратное. Обязательна минеральная подкормка с кальцием и витамином&nbsp;D3.</li>
+        <li><b>Здоровье.</b> Агамы подвержены агам-аденовирусу&nbsp;1, метаболической болезни костей и паразитарным инвазиям. Регулярные осмотры у ветеринара-герпетолога — обязательны.</li>
+      </ul>
+
+      <p style="margin-top:18px;">
+        В результате целенаправленной селекции выведены десятки <b>цветовых морф</b> — red, gold, hypo, translucent, leatherback, silkback и др. Некоторые морфы (например, silkback — без чешуи) требуют особого ухода: из-за повышенной потери воды через кожу они крайне чувствительны к обезвоживанию.
+      </p>
+    </section>
+
+    <!-- Behavior -->
+    <section id="behavior">
+      <span class="eyebrow">05 · Этология</span>
+      <h2>Поведение и коммуникация</h2>
+      <p>
+        Борода — основной визуальный сигнал. Раздувая горловой мешок и темнея, агама сообщает сородичам о территориальных претензиях, готовности к спариванию или тревоге. Дополнительно используются <b>кивки головой</b> (у самцов — быстрые, иерархические) и <b>«волна» передней лапой</b> — подчинённый жест, снимающий агрессию.
+      </p>
+      <p>
+        Тело способно незначительно менять оттенок (от светло-жёлтого до тёмно-коричневого) — это помогает регулировать теплообмен и коммуницировать настроение. Как и у других агам, у бородатой агамы обнаружены примитивные <b>ядовитые железы</b>, укус для человека не опасен и сопоставим с лёгким проколом.
+      </p>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <span class="eyebrow">06 · Иллюстрации</span>
+      <h2>Галерея</h2>
+      <p class="lead">Фотографии из Wikimedia Commons, лицензия CC&nbsp;BY-SA.</p>
+
+      <div class="cards">
+        <figure class="card">
+          <div class="img">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/383_-_Head_of_central_bearded_dragon_%28Pogona_vitticeps%29.jpg/960px-383_-_Head_of_central_bearded_dragon_%28Pogona_vitticeps%29.jpg"
+              alt="Голова центральной бородатой агамы крупным планом"
+              loading="lazy"
+              width="960" height="960" />
+          </div>
+          <figcaption class="body">
+            <h3>Голова крупным планом</h3>
+            <p>Хорошо видна структура «бороды» и шиповатые чешуи боковой поверхности шеи.</p>
+            <div class="credit">Фото: J.&nbsp;Sullivan · Australian Museum, CC&nbsp;BY-NC&nbsp;4.0</div>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <div class="img">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Pogona_vitticeps_2009_G2.jpg/960px-Pogona_vitticeps_2009_G2.jpg"
+              alt="Взрослая бородатая агама на ветке"
+              loading="lazy"
+              width="960" height="640" />
+          </div>
+          <figcaption class="body">
+            <h3>На присаде</h3>
+            <p>Типичная поза: греется на возвышении, высоко приподняв тело над субстратом.</p>
+            <div class="credit">Фото: Wikimedia Commons, CC&nbsp;BY-SA</div>
+          </figcaption>
+        </figure>
+
+        <figure class="card">
+          <div class="img">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Pogona_vitticeps_2009_G4.jpg/960px-Pogona_vitticeps_2009_G4.jpg"
+              alt="Молодая бородатая агама светлого окраса"
+              loading="lazy"
+              width="960" height="640" />
+          </div>
+          <figcaption class="body">
+            <h3>Молодая особь</h3>
+            <p>Ювенильный окрас светлее и контрастнее, с заметными поперечными полосами.</p>
+            <div class="credit">Фото: Wikimedia Commons, CC&nbsp;BY-SA</div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Sources -->
+    <section id="sources">
+      <span class="eyebrow">07 · Литература</span>
+      <h2>Источники</h2>
+      <ol>
+        <li><a href="https://en.wikipedia.org/wiki/Pogona_vitticeps" rel="noopener">Wikipedia — Central bearded dragon (Pogona vitticeps)</a>.</li>
+        <li><a href="https://australian.museum/learn/animals/reptiles/central-bearded-dragon/" rel="noopener">Australian Museum — Central Bearded Dragon</a>.</li>
+        <li><a href="https://animaldiversity.org/accounts/Pogona_vitticeps/" rel="noopener">Animal Diversity Web — Pogona vitticeps</a>.</li>
+        <li>Фотографии — Wikimedia Commons, лицензии CC&nbsp;BY-SA и CC&nbsp;BY-NC&nbsp;4.0.</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="inner">
+      <div>© 2026 · Статический сайт о бородатой агаме. Не научная публикация.</div>
+      <div>Контент под лицензией CC&nbsp;BY-SA&nbsp;4.0 · Фото — их авторы.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
